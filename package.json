@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/yas0reo/web3tp2/issues"
   },
-  "homepage": "https://github.com/yas0reo/web3tp2#readme"
+  "homepage": "https://github.com/yas0reo/web3tp2#readme",
+  "dependencies": {
+    "bootstrap": "^5.3.8"
+  }
 }
