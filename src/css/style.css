@@ -1,4 +1,4 @@
-/* reset très léger pour éviter les marges par défaut */
+@import url("https://fonts.googleapis.com/css2?family=Barrio&display=swap");
 *,
 *::before,
 *::after {
@@ -37,12 +37,15 @@ body {
 }
 
 .aespa .logo img {
+  grid-column: 1;
+  grid-row: 3;
   width: 80%;
   height: auto;
   object-fit: contain;
   display: flex;
   margin: 0 auto;
   background-size: contain;
+  max-height: 100px;
 }
 
 .other-members {
@@ -67,6 +70,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
+  height: 120px;
 }
 
 .map {
@@ -119,9 +123,9 @@ body {
   display: block;
   margin: 0 auto;
 }
-.personal-logo {
+.chart {
   grid-column: 4;
-  grid-row: 5 / span 2;
+  grid-row: 4 / span 2;
 }
 
 /* style générique des placeholders */

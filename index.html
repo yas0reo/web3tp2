@@ -4,7 +4,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>web3tp2</title>
-    <!-- CSS -->
     <link
       rel="stylesheet"
       href="./node_modules/bootstrap/dist/css/bootstrap.min.css"
@@ -15,18 +14,19 @@
     />
     <link rel="stylesheet" href="/src/css/style.css" />
 
-    <!-- JS -->
     <script type="importmap">
       {
         "imports": {
           "animejs": "./node_modules/animejs/dist/bundles/anime.esm.min.js",
           "chart.js/auto": "./node_modules/chart.js/auto/auto.js",
           "@kurkle/color": "./node_modules/@kurkle/color/dist/color.esm.js",
-          "typed.js": "./node_modules/typed.js/dist/typed.module.js"
-          "vfx-js": "https://esm.sh/@vfx-js/core"
+          "typed.js": "./node_modules/typed.js/dist/typed.module.js",
+          "vfx-js": "https://esm.sh/@vfx-js/core",
+          "zzz": "https://esm.sh/zdog"
         }
       }
     </script>
+    <script src="/src/js/zdog.js" type="module"></script>
     <script src="/src/js/maplibre.js" type="module"></script>
     <script src="/src/js/vfx.js" type="module"></script>
     <script src="/src/js/typejs.js" type="module"></script>
@@ -59,7 +59,7 @@
 
       <div class="hud-item audio">
         <button class="btn btn-primary">
-          <i class="bi bi-file-earmark-music"></i> Fichier audio
+          <i class="bi bi-file-earmark-music"></i> Ningning (solo)
         </button>
       </div>
 
@@ -76,7 +76,9 @@
       </div>
 
       <!-- Colonne droite -->
-      <div class="hud-item look">look 04</div>
+      <div class="hud-item look">
+        <canvas class="zdog-canvas"></canvas>
+      </div>
 
       <div class="hud-item other-pictures">
         <div class="NingNingImg">
@@ -84,7 +86,7 @@
         </div>
       </div>
 
-      <div class="hud-item personal-logo">personal logo, animation?</div>
+      <div class="hud-item chart"></div>
     </main>
   </body>
 </html>
