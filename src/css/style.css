@@ -1,0 +1,144 @@
+/* reset très léger pour éviter les marges par défaut */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+  background: #000000; /* juste pour ressembler un peu à ton fond noir */
+}
+
+/* Conteneur principal */
+.hud-layout {
+  display: grid;
+  /* 4 colonnes comme sur ton croquis : gauche, centre-gauche, full body, droite */
+  grid-template-columns: 1fr 1fr 2fr 1fr;
+  grid-template-rows: repeat(4, minmax(100px, auto));
+  gap: 1.5rem;
+  padding: 1.5rem;
+  max-width: 1300px;
+  margin: 0 auto;
+  background: #ffffff;
+}
+
+/* Définition des zones du grid */
+.brain {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.picture {
+  grid-column: 1;
+  grid-row: 2;
+}
+
+.aespa .logo img {
+  width: 80%;
+  height: auto;
+  object-fit: contain;
+  display: flex;
+  margin: 0 auto;
+  background-size: contain;
+}
+
+.other-members {
+  grid-column: 1;
+  grid-row: 4 / span 3; /* bloc plus grand comme sur le wireframe */
+}
+
+/* centre gauche */
+.person-info {
+  grid-column: 2;
+  grid-row: 1 / span 2;
+}
+
+.audio {
+  grid-column: 2;
+  grid-row: 3;
+  background-image: url("/assets/audio/audio.gif");
+  background-color: black;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.map {
+  place-items: center;
+  grid-column: 2;
+  grid-row: 4;
+  mix-blend-mode: multiply;
+}
+
+.chart-heart {
+  grid-column: 2;
+  grid-row: 5 / span 2;
+}
+
+/* full body au centre */
+.full-body,
+#ningning {
+  grid-column: 3;
+  grid-row: 1 / span 6;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+/* colonne droite */
+.look {
+  grid-column: 4;
+  grid-row: 1 / span 2;
+}
+
+.other-pictures .NingNingImg img {
+  grid-column: 4;
+  grid-row: 3 / span 2;
+  width: 80%;
+  height: auto;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.NingNingImg img {
+  width: 80%;
+  height: auto;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
+}
+.personal-logo {
+  grid-column: 4;
+  grid-row: 5 / span 2;
+}
+
+/* style générique des placeholders */
+.hud-item {
+  border: 1px dashed #888;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0.75rem;
+  font-size: 0.95rem;
+}
+
+/* optionnel : indication du type de placeholder */
+.hud-item::after {
+  content: attr(data-placeholder);
+  position: absolute;
+  font-size: 0.7rem;
+  opacity: 0.6;
+}

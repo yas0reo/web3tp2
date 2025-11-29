@@ -13,7 +13,7 @@
       rel="stylesheet"
       href="./node_modules/bootstrap-icons/font/bootstrap-icons.min.css"
     />
-    <link rel="stylesheet" href="./src/css/styles.css" />
+    <link rel="stylesheet" href="/src/css/style.css" />
 
     <!-- JS -->
     <script type="importmap">
@@ -21,14 +21,70 @@
         "imports": {
           "animejs": "./node_modules/animejs/dist/bundles/anime.esm.min.js",
           "chart.js/auto": "./node_modules/chart.js/auto/auto.js",
-          "@kurkle/color": "./node_modules/@kurkle/color/dist/color.esm.js"
+          "@kurkle/color": "./node_modules/@kurkle/color/dist/color.esm.js",
+          "typed.js": "./node_modules/typed.js/dist/typed.module.js"
+          "vfx-js": "https://esm.sh/@vfx-js/core"
         }
       }
     </script>
-    <script src="./src/js/animejs.js" type="module"></script>
-    <script src="./src/js/chartjs.js" type="module"></script>
-
-    <script src="./src/js/bootstrap.js" defer></script>
+    <script src="/src/js/maplibre.js" type="module"></script>
+    <script src="/src/js/vfx.js" type="module"></script>
+    <script src="/src/js/typejs.js" type="module"></script>
+    <script src="/src/js/tonejs.js" type="module"></script>
+    <script src="/src/js/animejs.js" type="module"></script>
+    <script src="/src/js/chartjs.js" type="module"></script>
+    <script src="/src/js/bootstrap.js" defer></script>
   </head>
-  <body></body>
+  <body>
+    <main class="hud-layout">
+      <!-- Colonne gauche -->
+      <div class="hud-item brain">cerveau tourne</div>
+
+      <div class="hud-item picture">picture</div>
+
+      <div class="hud-item aespa">
+        <div class="logo">
+          <img src="/assets/img/logo.jpeg" alt="" />
+        </div>
+      </div>
+
+      <div class="hud-item other-members">other members</div>
+
+      <!-- Colonne centre gauche -->
+      <div class="hud-item person-info">
+        <p>
+          <span id="typedjs-elem"></span>
+        </p>
+      </div>
+
+      <div class="hud-item audio">
+        <button class="btn btn-primary">
+          <i class="bi bi-file-earmark-music"></i> Fichier audio
+        </button>
+      </div>
+
+      <div class="hud-item map">
+        <div id="carte"></div>
+      </div>
+      <div class="hud-item chart-heart">chart heart</div>
+
+      <!-- Colonne centrale : full body -->
+      <div class="hud-item full-body">
+        <video id="ningning" autoplay muted loop playsinline>
+          <source src="/assets/video/ningning_video.MOV" type="video/mp4" />
+        </video>
+      </div>
+
+      <!-- Colonne droite -->
+      <div class="hud-item look">look 04</div>
+
+      <div class="hud-item other-pictures">
+        <div class="NingNingImg">
+          <img src="/assets/img/ningning/ningning08.jpg" alt="" />
+        </div>
+      </div>
+
+      <div class="hud-item personal-logo">personal logo, animation?</div>
+    </main>
+  </body>
 </html>
