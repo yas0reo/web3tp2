@@ -9,31 +9,32 @@ body {
   margin: 0;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
     sans-serif;
-  background: #000000; /* juste pour ressembler un peu à ton fond noir */
+  background: #000000;
 }
 
-/* Conteneur principal */
 .hud-layout {
   display: grid;
-  /* 4 colonnes comme sur ton croquis : gauche, centre-gauche, full body, droite */
   grid-template-columns: 1fr 1fr 2fr 1fr;
-  grid-template-rows: repeat(4, minmax(100px, auto));
-  gap: 1.5rem;
+  grid-template-rows: repeat(6, minmax(60px, auto));
+  gap: 1rem;
   padding: 1.5rem;
   max-width: 1300px;
   margin: 0 auto;
   background: #ffffff;
 }
 
-/* Définition des zones du grid */
 .brain {
   grid-column: 1;
   grid-row: 1;
 }
 
-.picture {
+.icon {
   grid-column: 1;
-  grid-row: 2;
+  grid-row: 2 / span 2;
+}
+
+.icons {
+  transform: scale(11);
 }
 
 .aespa .logo img {
@@ -50,10 +51,9 @@ body {
 
 .other-members {
   grid-column: 1;
-  grid-row: 4 / span 3; /* bloc plus grand comme sur le wireframe */
+  grid-row: 4 / span 2;
 }
 
-/* centre gauche */
 .person-info {
   grid-column: 2;
   grid-row: 1 / span 2;
@@ -85,7 +85,6 @@ body {
   grid-row: 5 / span 2;
 }
 
-/* full body au centre */
 .full-body,
 #ningning {
   grid-column: 3;
@@ -96,7 +95,6 @@ body {
   border-radius: 12px;
 }
 
-/* colonne droite */
 .look {
   grid-column: 4;
   grid-row: 1 / span 2;
@@ -126,9 +124,16 @@ body {
 .chart {
   grid-column: 4;
   grid-row: 4 / span 2;
+  width: 100%;
+  height: 240px;
+  position: relative;
 }
 
-/* style générique des placeholders */
+.chart-container canvas {
+  width: 100% !important;
+  height: 100% !important;
+}
+
 .hud-item {
   border: 1px dashed #888;
   display: flex;
@@ -139,7 +144,6 @@ body {
   font-size: 0.95rem;
 }
 
-/* optionnel : indication du type de placeholder */
 .hud-item::after {
   content: attr(data-placeholder);
   position: absolute;
