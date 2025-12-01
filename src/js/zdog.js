@@ -14,7 +14,7 @@ var eyeGroup = new Zdog.Group({
   addTo: illo,
   translate: { z: 20 },
 });
-// eye outline
+
 new Zdog.Ellipse({
   addTo: eyeGroup,
   width: 165,
@@ -23,7 +23,7 @@ new Zdog.Ellipse({
   fill: true,
   color: "black",
 });
-// eye white
+
 new Zdog.Ellipse({
   addTo: eyeGroup,
   width: 160,
@@ -40,20 +40,21 @@ var iris = new Zdog.Ellipse({
   fill: true,
   color: blue,
 });
-// pupil
+
 iris.copy({
   diameter: 40,
   color: eggplant,
 });
-// highlight
+
 iris.copy({
   diameter: 30,
   translate: { x: 15, y: -15 },
   color: "white",
 });
 
-// 👇
 function animate() {
+  illo.rotate.y += 0.03;
+  illo.rotate.x += 0.03;
   illo.updateRenderGraph();
   requestAnimationFrame(animate);
 }

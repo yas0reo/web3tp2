@@ -33,11 +33,30 @@
     <script src="/src/js/tonejs.js" type="module"></script>
     <script src="/src/js/animejs.js" type="module"></script>
     <script src="/src/js/chartjs.js" type="module"></script>
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="/src/js/bootstrap.js" defer></script>
   </head>
   <body>
     <main class="hud-layout">
-      <div class="hud-item brain">cerveau tourne</div>
+      <div class="hud-item other-members">
+        <div class="dropdown">
+          <button
+            class="btn btn-primary dropdown-toggle"
+            type="button"
+            id="dropdownMenuButton"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            Aespa Members
+          </button>
+          <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <li><a class="dropdown-item" href="#">Gisellle</a></li>
+            <li><a class="dropdown-item" href="#">Karina </a></li>
+            <li><a class="dropdown-item" href="#">Ningning</a></li>
+            <li><a class="dropdown-item" href="#">Winter</a></li>
+          </ul>
+        </div>
+      </div>
 
       <div class="hud-item icon">
         <div class="icons">
@@ -62,8 +81,6 @@
           <img class="effect" src="/assets/img/logo.jpeg" alt="" />
         </div>
       </div>
-
-      <div class="hud-item other-members">other members</div>
 
       <div class="hud-item person-info">
         <p>
@@ -103,6 +120,38 @@
 
       <div class="hud-item chart">
         <canvas class="charte"></canvas>
+      </div>
+
+      <div class="hud-item footers">
+        <div class="b-example-divider"></div>
+        <div class="container">
+          <footer class="py-3 my-4">
+            <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+              <li class="nav-item">
+                <a href="#" class="nav-link px-2 text-body-secondary">Home</a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link px-2 text-body-secondary"
+                  >Giselle</a
+                >
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link px-2 text-body-secondary">Karina</a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link px-2 text-body-secondary"
+                  >Ningning</a
+                >
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link px-2 text-body-secondary">Winter</a>
+              </li>
+            </ul>
+            <p class="text-center text-body-secondary">
+              &copy; 2025 yas0reo, Inc
+            </p>
+          </footer>
+        </div>
       </div>
     </main>
   </body>

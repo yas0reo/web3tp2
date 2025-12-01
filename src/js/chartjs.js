@@ -6,7 +6,7 @@ let graphique = new Chart(document.querySelector(".charte"), {
     labels: ["Rap", "Synchronisation dance", "Présence camera", "Endurance"],
     datasets: [
       {
-        data: [1, 2, 3, 4],
+        data: [15, 20, 35, 30],
         backgroundColor: [
           "#3E84BF",
           "#86238D",

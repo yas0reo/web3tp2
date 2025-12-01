@@ -15,15 +15,16 @@ body {
 .hud-layout {
   display: grid;
   grid-template-columns: 1fr 1fr 2fr 1fr;
-  grid-template-rows: repeat(6, minmax(60px, auto));
+  grid-template-rows: repeat(5, minmax(10px, auto));
   gap: 1rem;
   padding: 1.5rem;
   max-width: 1300px;
+
   margin: 0 auto;
   background: #ffffff;
 }
 
-.brain {
+.other-members {
   grid-column: 1;
   grid-row: 1;
 }
@@ -40,18 +41,13 @@ body {
 .aespa .logo img {
   grid-column: 1;
   grid-row: 3;
-  width: 80%;
+  width: 120%;
   height: auto;
   object-fit: contain;
   display: flex;
   margin: 0 auto;
   background-size: contain;
   max-height: 100px;
-}
-
-.other-members {
-  grid-column: 1;
-  grid-row: 4 / span 2;
 }
 
 .person-info {
@@ -88,7 +84,7 @@ body {
 .full-body,
 #ningning {
   grid-column: 3;
-  grid-row: 1 / span 6;
+  grid-row: 1 / span 4;
   width: 100%;
   height: auto;
   object-fit: cover;
@@ -133,7 +129,11 @@ body {
   width: 100% !important;
   height: 100% !important;
 }
-
+.footers {
+  grid-column: 1 / span 4;
+  grid-row: 5;
+  min-height: 10px;
+}
 .hud-item {
   border: 1px dashed #888;
   display: flex;

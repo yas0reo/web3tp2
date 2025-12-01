@@ -4,6 +4,6 @@ const vfx = new VFX();
 document.querySelectorAll(".effect").forEach((target) => {
   vfx.add(target, {
     shader: "glitch",
-    overflow: 10,
+    overflow: 40,
   });
 });
