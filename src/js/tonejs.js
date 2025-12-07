@@ -7,7 +7,7 @@ const player = new Tone.Player(
 const btn = document.getElementById("playAudio");
 
 btn.addEventListener("click", async () => {
-  await Tone.start(); // Obligatoire pour débloquer l’audio
+  await Tone.start();
 
   Tone.loaded().then(() => {
     player.start();
